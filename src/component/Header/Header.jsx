@@ -1,4 +1,5 @@
 import React from 'react';
+import './header.css';
 
 const Header = () => {
   const headerStyle = {
@@ -16,9 +17,24 @@ const Header = () => {
   return (
     <header style={headerStyle}>
         <div className="header-inner">
-            <h1 style={titleStyle}>This is is the Header</h1>
-            <p>test test</p>
-            <div>test</div>
+            <div className="header-left">
+              <a href="/">
+                <h1 style={titleStyle}>Logo</h1>
+              </a>
+            </div>
+            <div className="header-right">
+              <ul>
+                <li>
+                  <a href="/">トップへ</a>
+                </li>
+                <li>
+                  <a href="/collections/all">商品一覧</a>
+                </li>
+                <li>
+                  <a href="/pages/contact">お問い合わせ</a>
+                </li>
+              </ul>
+            </div>
         </div>
     </header>
   );
