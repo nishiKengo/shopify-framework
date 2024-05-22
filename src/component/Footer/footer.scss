@@ -1,0 +1,25 @@
+footer{
+    .footer-inner{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        align-items: center;
+        margin: 0 auto;
+        
+        .footer-left{
+            
+        }
+        .footer-right{
+            
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
+}

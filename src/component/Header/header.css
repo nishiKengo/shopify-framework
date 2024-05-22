@@ -1,0 +1,15 @@
+header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 auto;
+}
+header .header-inner .header-right ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .header-inner .header-right ul li {
+  list-style: none;
+}/*# sourceMappingURL=header.css.map */

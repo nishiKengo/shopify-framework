@@ -1,4 +1,5 @@
 import React from 'react';
+import './footer.css';
 
 const Footer = () => {
   const headerStyle = {
@@ -15,12 +16,32 @@ const Footer = () => {
 
   return (
     <footer style={headerStyle}>
-        <div className="footer-inner">
-            Footer-Test
+      <div className="footer-inner">
+        <div className="footer-left">
+          <a href="/">
+            Footer-Logo
+          </a>
         </div>
-        <div>
-            Footer-Test
+        <div className='footer-right'>
+            <ul>
+              <li>
+                <a href="/">
+                  トップへ
+                </a>
+              </li>
+              <li>
+                <a href="/collections/all">
+                  商品一覧
+                </a>
+              </li>
+              <li>
+                <a href="/pages/contact">
+                  お問い合わせ
+                </a>
+              </li>
+            </ul>
         </div>
+      </div>
     </footer>
   );
 };
