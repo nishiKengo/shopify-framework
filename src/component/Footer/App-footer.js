@@ -1,11 +1,11 @@
 // src/App.js
 import React from 'react';
-import Header from './component/header'
+import Footer from './Footer'
 
 const App = () => {
   return (
     <div>
-      <Header/>
+      <Footer />
     </div>
   );
 };

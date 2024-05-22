@@ -16,8 +16,9 @@ const Header = () => {
   return (
     <header style={headerStyle}>
         <div className="header-inner">
-            <h1 style={titleStyle}>This is the Header</h1>
-            
+            <h1 style={titleStyle}>This is is the Header</h1>
+            <p>test test</p>
+            <div>test</div>
         </div>
     </header>
   );
