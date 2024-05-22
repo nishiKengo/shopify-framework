@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "watch:theme": "theme watch",
-    "dev": "concurrently \"npm start\" \"npm run watch:theme\""
+    "start": "concurrently \"npm run webpack\" \"npm run theme-watch\"",
+    "webpack": "webpack --watch",
+    "theme-watch": "theme watch"
+
   },
   "keywords": [],
   "author": "",
