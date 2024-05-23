@@ -142,7 +142,9 @@
     translations: {
       cart: '{{ "templates.cart.cart" | t }}',
       cart_count: '{{ "sections.header.cart_count" | t: count: "__COUNT__" }}'
-    }
+    },
+    iconCart: `{% render 'icon-cart' %}`,
+    iconCartEmpty: `{% render 'icon-cart-empty' %}`,
   };
   console.log(cartData)
   </script>

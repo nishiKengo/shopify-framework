@@ -12,4 +12,8 @@ header .header-inner .header-right ul {
 }
 header .header-inner .header-right ul li {
   list-style: none;
+}
+header .header-inner .header-right ul li a div .icon-cart {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=header.css.map */

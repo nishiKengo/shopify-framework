@@ -1,15 +1,19 @@
 // CartComponent.jsx
-
 import React, { useEffect, useState } from 'react';
+import './header.css'
 
 const CartComponent = () => {
   const [cart, setCart] = useState(null);
   const [translations, setTranslations] = useState({});
+  const [iconCart, setIconCart] = useState('')
+  const [iconCartEmpty, setIconCartEmpty] = useState('')
 
-  useEffect(() => {
+useEffect(() => {
     if (window.cartData) {
-      setCart(window.cartData.cart);
-      setTranslations(window.cartData.translations);
+    setCart(window.cartData.cart);
+    setTranslations(window.cartData.translations);
+    setIconCart(window.cartData.iconCart);
+    setIconCartEmpty(window.cartData.iconCartEmpty);
     }
   }, []);
 
@@ -20,9 +24,11 @@ const CartComponent = () => {
   return (
     <div style={{position: "relative"}}>
       {cart.item_count === 0 ? (
-        <div className="icon-cart-empty">Empty Cart Icon</div>
+        //レンダリングされたLiquidスニペットを挿入する
+        <div className="icon-cart" dangerouslySetInnerHTML={{ __html: iconCartEmpty }}></div>
       ) : (
-        <div className="icon-cart">Cart Icon</div>
+        //レンダリングされたLiquidスニペットを挿入する
+        <div className="icon-cart" dangerouslySetInnerHTML={{ __html: iconCart }}></div>
       )}
       <span className="visually-hidden">{translations.cart}</span>
       {cart.item_count !== 0 && (
