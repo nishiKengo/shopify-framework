@@ -586,3 +586,15 @@
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  window.productData = window.productData || [];
+  window.productData.push({
+    id: {{ product.id | json }},
+    title: {{ product.title | json }},
+    url: {{ product.url | json }},
+    imageUrl: {{ product.featured_image.src | json }},
+    price: {{ product.price | money }},
+    // 他に必要なデータをここに追加
+  });
+</script>
