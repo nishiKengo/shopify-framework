@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import CartComponent from './CartComponent';
 
 const Header = () => {
   const headerStyle = {
@@ -29,6 +30,11 @@ const Header = () => {
                 </li>
                 <li>
                   <a href="/collections/all">商品一覧</a>
+                </li>
+                <li>
+                  <a href="/cart">
+                    <CartComponent/>
+                  </a>
                 </li>
                 <li>
                   <a href="/pages/contact">お問い合わせ</a>
