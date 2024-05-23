@@ -117,6 +117,14 @@ class CartItems extends HTMLElement {
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
     });
+    
+    // カートが更新されたときにイベントを発行する関数
+    function dispatchCartUpdateEvent(cartData) {
+    const event = new CustomEvent('cartUpdated', {
+      detail: { cartData }
+    });
+      window.dispatchEvent(event);
+    }
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
       .then((response) => {
@@ -124,6 +132,8 @@ class CartItems extends HTMLElement {
       })
       .then((state) => {
         const parsedState = JSON.parse(state);
+        // ここにイベントを発行するコードを追加
+        dispatchCartUpdateEvent(parsedState);
         const quantityElement =
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
         const items = document.querySelectorAll('.cart-item');

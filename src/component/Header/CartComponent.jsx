@@ -15,6 +15,19 @@ useEffect(() => {
     setIconCart(window.cartData.iconCart);
     setIconCartEmpty(window.cartData.iconCartEmpty);
     }
+
+    // カート更新イベントをリッスン
+    const handleCartUpdate = (event) => {
+        const { cartData } = event.detail;
+        setCart(cartData);
+    };
+
+    window.addEventListener('cartUpdated', handleCartUpdate);
+
+    // クリーンアップ
+    return () => {
+        window.removeEventListener('cartUpdated', handleCartUpdate);
+    };
   }, []);
 
   if (!cart) {
