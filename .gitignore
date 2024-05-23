@@ -2,3 +2,4 @@ node_modules
 config.yml
 src/component/Header/header.css.map
 src/component/Footer/Footer.css.map
+src/component/Products/Card/product-card.css.map
